@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="id.rdev.catatanpenjualan"
+    android:targetSandboxVersion="2"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="22"
+        android:targetSdkVersion="28" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="false"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:debuggable="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:testOnly="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true" >
+        <activity android:name="id.rdev.catatanpenjualan.activity.report.ReportActivity" />
+        <activity android:name="id.rdev.catatanpenjualan.activity.penjualan.PenjualanBarang" />
+        <activity android:name="id.rdev.catatanpenjualan.activity.data_barang.DataBarangActivity" />
+        <activity android:name="id.rdev.catatanpenjualan.activity.register.RegisterActivity" />
+        <activity android:name="id.rdev.catatanpenjualan.activity.data_barang._add.AddBarangActivity" />
+        <activity android:name="id.rdev.catatanpenjualan.activity.login.LoginActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="id.rdev.catatanpenjualan.activity._main.MainActivity" />
+
+        <provider
+            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+            android:authorities="id.rdev.catatanpenjualan.lifecycle-process"
+            android:exported="false"
+            android:multiprocess="true" />
+    </application>
+
+</manifest>
